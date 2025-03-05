@@ -134,7 +134,7 @@ const Navbar = ({ onSearch, onShowWishlist }) => {
                   </svg>
                 </button>
               ) : (
-                <Link to="/">
+                <Link to="/login">
                   <button className="bg-amber-800 text-white rounded-full py-2 px-6 hover:bg-amber-900 transition-colors shadow-md font-medium">
                     Login
                   </button>
@@ -188,7 +188,7 @@ const Navbar = ({ onSearch, onShowWishlist }) => {
                   </svg>
                 </button>
               ) : (
-                <Link to="/">
+                <Link to="/login">
                   <button className="bg-amber-800 text-white rounded-full py-1.5 px-4 text-sm hover:bg-amber-900 transition-colors shadow-md font-medium">
                     Login
                   </button>
@@ -278,7 +278,7 @@ const Navbar = ({ onSearch, onShowWishlist }) => {
                 </svg>
               </div>
               <div>
-                <div className="font-medium text-gray-800">{user?.name || "Welcome"}</div>
+                <div className="font-medium text-gray-800">{user?.fname || "Welcome"}</div>
                 <div className="text-sm text-gray-500">Manage your account</div>
               </div>
             </div>
@@ -298,7 +298,7 @@ const Navbar = ({ onSearch, onShowWishlist }) => {
                 My Orders
               </Link>
               <div className="border-t my-2"></div>
-              <Link to="/">
+              <Link to="/login">
                 <button
                   onClick={handleLogout}
                   className="w-full flex items-center justify-center space-x-2 bg-red-500 text-white rounded-lg py-2.5 px-4 hover:bg-red-600 transition-colors font-medium"

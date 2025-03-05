@@ -25,7 +25,7 @@ function SignUp() {
           setNotification('Signup successful!');
           toast.success('Signup successful!');
           resetForm();
-          setTimeout(() => navigate('/'), 1000);
+          setTimeout(() => navigate('/login'), 1000);
         }
       } catch (error) {
         console.error('There was an error!', error);
@@ -153,7 +153,7 @@ function SignUp() {
         <div className="mt-4 text-center">
           <p className="text-sm text-gray-600">
             Already have an account?{' '}
-            <Link to="/" className="text-indigo-600 hover:underline">
+            <Link to="/login" className="text-indigo-600 hover:underline">
               Log in
             </Link>
           </p>

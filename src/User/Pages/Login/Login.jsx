@@ -97,10 +97,16 @@ const Login = () => {
 
         {/* Google Login Button */}
         <GoogleLoginButton
-          type="button"  // Add this line to avoid the warning
+          type="button"  
           onSuccess={handleGoogleSuccess}
           onFailure={handleGoogleFailure}
-        />      </form>
+        /> 
+
+        {/* Signup Link */}
+        <p className="text-sm text-gray-600 mt-4 text-center">
+          Don't have an account? <Link to="/signup" className="text-blue-600 hover:underline">Sign up</Link>
+        </p>
+      </form>
     </div>
   );
 };

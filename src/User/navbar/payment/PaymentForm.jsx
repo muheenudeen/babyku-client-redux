@@ -152,7 +152,7 @@ const PaymentForm = () => {
          
                 <button onClick={handleCheckout} type="submit" className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300" >  Continue </button>
                
-                <Link to="/" className="w-full text-center bg-lime-900 text-white mt-4 py-2 px-4 rounded-lg hover:bg-lime-800 transition duration-300 block"  >
+                <Link to="/home" className="w-full text-center bg-lime-900 text-white mt-4 py-2 px-4 rounded-lg hover:bg-lime-800 transition duration-300 block"  >
                     To Home
                 </Link>
             </form>

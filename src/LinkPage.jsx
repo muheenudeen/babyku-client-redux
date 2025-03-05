@@ -13,6 +13,9 @@ import AdminHome from './admin/compoent/home/AdminHome.jsx';
 import Userlist from './admin/compoent/userlists/UserList.jsx';
 import AdminProduct from './admin/compoent/products/AdminProduct.jsx';
 import CategoryPage from './User/Pages/categoryPage/categoryPage.jsx';
+import Profile from './User/Pages/pofile/profile.jsx';
+import Orders from './User/Pages/order/order.jsx';
+import SplashScreen from './User/Pages/splashScreen/splashScreen.jsx';
 
 const LinkPage = () => {
   const [cart, setCart] = useState([]);
@@ -34,7 +37,7 @@ const LinkPage = () => {
         <Route path="/shop" element={<Shop addToCart={handleAddToCart} />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<ContactUs />} />
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path='/cart' element={<Carts cart={cart} setCart={setCart} />} />
         <Route path='/paymentform' element={<PaymentForm />} />
         <Route path='/paymentform' element={<PaymentForm />} />
@@ -48,6 +51,9 @@ const LinkPage = () => {
         <Route path='/adminhome' element={<AdminHome />} />
         <Route path='/userlist' element={<Userlist />} />
         <Route path='/adminproduct' element={<AdminProduct />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/orders' element={<Orders />} />
+        <Route path='/' element={<SplashScreen />} />
       </Routes>
     </>
   );
