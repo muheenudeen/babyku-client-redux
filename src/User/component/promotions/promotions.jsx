@@ -12,7 +12,7 @@ export default function SlidingPromotions() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % promotions.length);
-    }, 3000); // Change message every 3 seconds
+    }, 3000); 
     return () => clearInterval(interval);
   }, []);
 
