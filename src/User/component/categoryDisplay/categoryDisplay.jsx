@@ -29,7 +29,7 @@ function CategoryDisplay() {
 
   return (
     <div className="p-6 flex flex-col items-center bg-yellow-50">
-<h2 className="text-3xl md:text-3xl font-bold text-center mb-6">SHOP BY CATEGORY</h2>
+<h2 className="text-3xl md:text-3xl font-bold text-center mb-14 mt-14">SHOP BY CATEGORY</h2>
 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
         {categories.map((category, index) => (
           <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handleCategoryClick(category)}>

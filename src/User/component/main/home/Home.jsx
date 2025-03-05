@@ -93,10 +93,11 @@ function Home() {
 
       <CategoryDisplay />
 
-      <h1 className="text-center text-2xl font-bold mt-6">PARENT-APPROVED BESTSELLERS</h1>
 
       {/* Product Slider */}
       <div className="p-4 bg-stone-100">
+      <h1 className="text-center text-2xl font-bold mb-14 mt-14 ">PARENT-APPROVED BESTSELLERS</h1>
+
         <Slider {...productSliderSettings}>
           {products.map((product) => (
             <div key={product._id} className="p-2">
@@ -109,7 +110,7 @@ function Home() {
                   <img
                     src={product.imageSrc}
                     alt={product.description}
-                    className="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-110"
+                    className="w-full object-cover transform transition-transform duration-300 hover:scale-110"
                   />
                 </div>
 
