@@ -54,8 +54,6 @@ const Navbar = ({ onSearch, onShowWishlist }) => {
                 />
               </Link>
             </div>
-
-            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
