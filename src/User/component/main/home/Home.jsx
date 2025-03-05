@@ -68,7 +68,6 @@ function Home() {
 
   return (
     <>
-      <SlidingPromotions />
       <Navbar />
 
       {/* Banner Section */}
