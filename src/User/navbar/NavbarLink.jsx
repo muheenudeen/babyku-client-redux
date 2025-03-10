@@ -42,9 +42,8 @@ const Navbar = ({ onSearch, onShowWishlist }) => {
         <SlidingPromotions/>
         <div className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
-            {/* Logo */}
             <div className="flex-shrink-0">
-              <Link to="/" className="flex items-center">
+              <Link to="/home" className="flex items-center">
                 <img
                   width="120"
                   height="40"
@@ -54,6 +53,7 @@ const Navbar = ({ onSearch, onShowWishlist }) => {
                 />
               </Link>
             </div>
+
             <div className="hidden md:flex items-center space-x-8">
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -118,8 +118,6 @@ const Navbar = ({ onSearch, onShowWishlist }) => {
                   </span>
                 )}
               </Link>
-
-              {/* User Account */}
               {isLoggedIn ? (
                 <button onClick={openModal} className="p-2 rounded-full hover:bg-amber-200 transition-colors">
                   <svg
@@ -212,7 +210,6 @@ const Navbar = ({ onSearch, onShowWishlist }) => {
             </div>
           </div>
 
-          {/* Mobile Search Bar */}
           {isOpen && (
             <div className="mt-3 pb-3 md:hidden">
               <div className="relative">

@@ -39,7 +39,6 @@ function Shop() {
       .then((response) => {
         if (response.data.success) {
           setProducts(response.data.data)
-          // Initially display only first batch of products
           setDisplayedProducts(response.data.data.slice(0, productsPerPage))
         }
       })
@@ -69,7 +68,7 @@ function Shop() {
 
   const handleSearchChange = (searchValue) => {
     setSearchItem(searchValue)
-    setPage(1) // Reset to first page when search changes
+    setPage(1)
   }
 
   const handleAddToCart = (product) => {

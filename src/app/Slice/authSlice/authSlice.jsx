@@ -2,12 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 import toast from "react-hot-toast";
 import api from "../../../../utis/axios";
 
-
 const initialState = {
   isLoggedIn: !!localStorage.getItem("token"),
   userId: localStorage.getItem("id") || "",
 };
-
 const authSlice = createSlice({
   name: "auth",
   initialState,
@@ -25,9 +23,6 @@ const authSlice = createSlice({
       state.userId = "";
       localStorage.removeItem("id");
       localStorage.removeItem("token"); 
-      
-      
-     
       
     },
   },

@@ -8,7 +8,6 @@ import HomeModal from '../../../../admin/compoent/componants/modal/homeModal';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import SlidingPromotions from '../../promotions/promotions';
 import CategoryDisplay from '../../categoryDisplay/categoryDisplay';
 import ImageGallery from '../../imgStyle/imgStyle';
 
@@ -67,12 +66,13 @@ function Home() {
   };
 
   return (
-    <>
-      <Navbar />
-
-      {/* Banner Section */}
+  
+    <div>
       <div className="w-full mt-3">
+       <Navbar/>
+
         <Slider {...bannerSettings} className="w-full">
+          
           {[
             "https://www.menmoms.in/cdn/shop/files/Baby-Fashion-Clothes-Category-Page-Banner-Desktop.jpg?v=1727780797",
             "https://www.menmoms.in/cdn/shop/files/Sale-Category-Page-Banner-Desktop.jpg?v=1727779570",
@@ -89,14 +89,9 @@ function Home() {
           ))}
         </Slider>
       </div>
-
       <CategoryDisplay />
-
-
-      {/* Product Slider */}
       <div className="p-4 bg-stone-100">
       <h1 className="text-center text-2xl font-bold mb-14 mt-14 ">PARENT-APPROVED BESTSELLERS</h1>
-
         <Slider {...productSliderSettings}>
           {products.map((product) => (
             <div key={product._id} className="p-2">
@@ -112,7 +107,6 @@ function Home() {
                     className="w-full object-cover transform transition-transform duration-300 hover:scale-110"
                   />
                 </div>
-
                 {/* Product Details */}
                 <div className="p-3">
                   <p className="text-lg font-semibold">{product.title}</p>
@@ -140,9 +134,8 @@ function Home() {
             </div>
           ))}
         </Slider>
-      </div>
 
-      {/* Modal Section */}
+      </div>
       <HomeModal
         isOpen={isModalOpen}
         onClose={closeModal}
@@ -151,7 +144,8 @@ function Home() {
       <ImageGallery/>
 
       <Footer />
-    </>
+      </div>
+    
   );
 }
 
