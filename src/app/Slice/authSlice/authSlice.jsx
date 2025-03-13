@@ -14,7 +14,6 @@ const authSlice = createSlice({
     loginSuccess: (state, action) => {
       state.isLoggedIn = true;
       state.userId = action.payload;
-      
     },
 
 
